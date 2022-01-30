@@ -21,6 +21,8 @@ import com.example.demo.service.ServiceClass;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+//employee crud controller
 @RestController
 public class DemoController {
 	private static final Logger LOGGER=LoggerFactory.getLogger(DemoController.class);
