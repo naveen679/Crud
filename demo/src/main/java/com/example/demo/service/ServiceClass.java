@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.Repo.AddRepo;
-import com.example.demo.Repo.RepositoryClass;
+/*import com.example.demo.Repo.AddRepo;
+import com.example.demo.Repo.RepositoryClass;*/
 import com.example.demo.model.DemoModel;
 import com.example.demo.model.Address;
 
@@ -19,11 +19,11 @@ public class ServiceClass{
 	DemoModel dm;
 	@Autowired
 	Address ad;
-	@Autowired
-	RepositoryClass rp;
-	
-	@Autowired
-	AddRepo ar;
+	/*
+	 * @Autowired RepositoryClass rp;
+	 * 
+	 * @Autowired AddRepo ar;
+	 */
 
 	
 	public DemoModel getEmployee() {
@@ -32,11 +32,7 @@ public class ServiceClass{
 		 dm.setDepartment("cde");
 		 dm.setSalary(30000);
 		 dm.setEmpname("Naveen");
-			ad.setHno(12);
-			ad.setStrname("kummari");
-			ad.setVname("kairawadi");
-			ad.setStatename("ap");
-		 dm.setAdress(ad);
+		 dm.setAdress(getAddress());
 		
 		return dm;
 	}
@@ -46,18 +42,15 @@ public class ServiceClass{
 		ad.setStrname("kummari");
 		ad.setVname("kairawadi");
 		ad.setStatename("ap");
-		 
-		 
-		
 		return ad;
 	}
 
 	
-	public DemoModel postemployee(DemoModel dm) {
-		
-		return rp.save(dm);
-	}
-	
-	
+	/*
+	 * public DemoModel postemployee(DemoModel dm) {
+	 * 
+	 * return rp.save(dm); }
+	 * 
+	 */	
 
 }

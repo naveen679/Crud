@@ -7,10 +7,9 @@ import javax.persistence.Id;
 import org.springframework.stereotype.Component;
 
 
-@Entity
+
 @Component
 public class DemoModel {
-	@Id
 	private int empid;
 	private String empname;
 	private String Department;

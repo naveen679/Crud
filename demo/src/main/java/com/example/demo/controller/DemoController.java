@@ -33,10 +33,15 @@ public class DemoController {
 	
 	@Autowired
 	DemoModel dm;
+	@Autowired
+	Address dr;
 	@GetMapping("/getemployees")
 	public Object getemployees()
 	{
+		//dr=sv.getAddress();
 		DemoModel dl=sv.getEmployee();
+		
+		System.out.println(dl);
 		
 		LOGGER.info("APPLICATION STARTED RUNNING");
 		//To Create Nested Json Object Logic
@@ -45,12 +50,17 @@ public class DemoController {
 		 map.put("designation","cde");
 		 map.put("company","cognizant");
 		 map.put("Employees",dl);
-		 //map.put("Address",ld);
+		 //map.put("Address",dr);
 		
 		
 	    return dl;
 	}
-	@PostMapping("/postemployees")
+	@GetMapping("/test")
+	public String testdata()
+	{
+		return "test";
+	}
+/*	@PostMapping("/postemployees")
 	public DemoModel postemployees(@RequestBody DemoModel dm)
 	{
 		if(dm.getEmpname()=="")
@@ -69,5 +79,5 @@ public class DemoController {
 		}
 		
 		return "correct input";
-	}
+	} */
 }

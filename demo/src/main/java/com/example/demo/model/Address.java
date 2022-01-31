@@ -1,19 +1,21 @@
 package com.example.demo.model;
-import javax.persistence.Entity;
+
 import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
 
 
 @Component
-@Entity
 public class Address {
 	
+	@Override
+	public String toString() {
+		return "Address [Hno=" + Hno + ", strname=" + strname + ", vname=" + vname + ", statename=" + statename + "]";
+	}
 	public Address() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Id
 	private int Hno;
 	private String strname;
 	private String vname;
